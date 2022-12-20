@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM Four assending order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+	<input type="number" id="a" value="">
+	<input type="number" id="b" value="">
+	<input type="number" id="c" value="">
+	<input type="number" id="d" value="">
+	
+	<button type="button" id="btn" value="" onclick="myFunction()">click</button>
+    
+	<h1 id="output"></h1>
+		<script>
+
+			
+
+			function myFunction(){
+				let a=document.getElementById("a").value;
+				let b=document.getElementById("b").value;
+				let c=document.getElementById("c").value;
+				let d=document.getElementById("d").value;
+				
+				if(a>b && a>c && a>d){
+					if(b>c && b>d){
+						if(c>d){
+							document.getElementById("output").innerHTML=(d+c+b+a);
+						}
+						else{
+							document.getElementById("output").innerHTML=(c+d+b+a);
+						}
+					}
+					else if(c>b && c>d){
+						if(b>d){
+							document.getElementById("output").innerHTML=(d+b+c+a);
+						}
+						else{
+							document.getElementById("output").innerHTML=(b+d+c+a);
+						}
+					}
+					else if(d>b && d>c){
+						if(b>c){
+							document.getElementById("output").innerHTML=(c+b+d+a);
+						}
+						else{
+							document.getElementById("output").innerHTML=(b+c+d+a);
+						}
+					}
+					
+				}
+				else if(b>a && b>c && b>d){
+					if(a>c && a>d){
+						if(c>d){
+							document.getElementById("output").innerHTML=(d+c+a+b);
+						}
+						else{
+							document.getElementById("output").innerHTML=(c+d+a+b);
+						}
+					}
+					else if(c>a && c>d){
+						if(a>d){
+							document.getElementById("output").innerHTML=(d+a+c+b);
+						}
+						else{
+							document.getElementById("output").innerHTML=(a+d+c+b);
+						}
+					}
+					else if(d>a && d>c){
+						if(a>c){
+							document.getElementById("output").innerHTML=(c+a+d+b);
+						}
+						else{
+							document.getElementById("output").innerHTML=(a+c+d+b);
+						}
+					}	
+				}
+				
+				else if(c>a && c>b && c>d){
+					if(a>b && a>d){
+						if(b>d){
+							document.getElementById("output").innerHTML=(d+b+a+c);
+						}
+						else{
+							document.getElementById("output").innerHTML=(b+d+a+c);
+						}
+					}
+					else if(b>a && b>d){
+						if(a>d){
+							document.getElementById("output").innerHTML=(d+a+b+c);
+						}
+						else{
+							document.getElementById("output").innerHTML=(a+d+b+c);
+						}
+					}
+					else if(d>a && d>b){
+						if(a>b){
+							document.getElementById("output").innerHTML=(b+a+d+c);
+						}
+						else{
+							document.getElementById("output").innerHTML=(a+b+d+c);
+						}
+					}	
+				}
+				
+				else if(d>a && d>b && d>c){
+					if(a>b && a>c){
+						if(b>c){
+							document.getElementById("output").innerHTML=(c+b+a+d);
+						}
+						else{
+							document.getElementById("output").innerHTML=(b+c+a+d);
+						}
+					}
+					else if(b>a && b>c){
+						if(a>c){
+							document.getElementById("output").innerHTML=(c+a+b+d);
+						}
+						else{
+							document.getElementById("output").innerHTML=(a+c+b+d);
+						}
+					}
+					else if(c>a && c>b){
+						if(a>b){
+							document.getElementById("output").innerHTML=(b+a+c+d);
+						}
+						else{
+							document.getElementById("output").innerHTML=(a+b+c+d);
+						}
+					}
+					
+				}
+			}
+		</script>
+	</body>
+</html>
